@@ -1,0 +1,8 @@
+.card {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+@font-face {
+    font-family: 'Noto Color Emoji';
+    src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
+  }
