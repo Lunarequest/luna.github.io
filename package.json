@@ -1,0 +1,22 @@
+{
+  "name": "luna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "nullrequest <advaith.madhukar@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "postcss-loader": "^6.1.1",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1"
+  }
+}
