@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta name="color-scheme" content="light dark">
+    <!-- If `prefers-color-scheme` is not supported, fall back to light mode.
+              In this case, inject the `light` CSS before the others, with
+              no media filter so that it will be downloaded with highest priority. -->
+    <script>
+        if (window.matchMedia("(prefers-color-scheme: dark)").media === "not all") {
+            document.documentElement.style.display = "none";
+            document.head.insertAdjacentHTML(
+                "beforeend",
+                "<link id=\"css\" rel=\"stylesheet\" href=\"../dist/css/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
+            );
+        }
+    </script>
+    <!-- Load the alternate CSS first ...
+              in this case the Bootstrap-Dark Variant CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.0/dist/css/bootstrap-night.min.css" rel="stylesheet"
+        media="(prefers-color-scheme: dark)">
+    <!-- and then the primary CSS last ...
+              in this case the (original) Bootstrap Variant CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        media="(prefers-color-scheme: light)">
     <link href="./common.css">
     <meta name="description" content="About me Luna!">
     <meta name="robots" content="index,follow"><!-- All Search Engines -->
@@ -13,13 +33,13 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand">Luna</a>
         </div>
     </nav>
     <div>
-        <div class="bg-light p-5 rounded-lg m-3 card">
+        <div class="p-5 rounded-lg m-3 card">
             <h2>About me!</h2>
             <p>
                 Hi I'm luna, I go by lunarequest or nullrequest. I'm 18 years old and love to code.<br />
@@ -31,7 +51,7 @@
             </ul>
             </p>
         </div>
-        <div class="bg-light p-5 rounded-lg m-3 card">
+        <div class="p-5 rounded-lg m-3 card">
             <h2>Stuff I like to do</h2>
             <p>
                 As I said before I love to code. my favorite langs are python <img src="./images/python.png" width="45">
@@ -58,7 +78,7 @@
             </p>
             </p>
         </div>
-        <div class="bg-light p-5 rounded-lg m-3 card">
+        <div class="p-5 rounded-lg m-3 card">
             <h2>Social media</h2>
             <ul>
                 <li><a href="https://twitter.com/lunarequest">Twitter</a></li>
